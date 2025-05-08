@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<script src="https://cdn.jsdelivr.net/npm/smiles-drawer@2.0.1/dist/smiles-drawer.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>LigTraj 数据库</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top navigation bar -->
+    <nav class="topnav">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="dropdown-content" id="dropdownMenu">
+            <a href="#" onclick="loadIntro()">Intro</a>
+            <a href="#" onclick="loadDataset()">Dataset</a>
+            <a href="#" onclick="loadContact()">Contact</a>           
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h2>LigTraj</h2>
+        <input type="text" id="searchInput" placeholder="Search keywords..." oninput="searchPDB()">
+        <ul id="pdbList">
+            <li onclick="showDetails(this)">tyrosine_kinase_1xyz</li>
+            <li onclick="showDetails(this)">tyrosine_kinase_2abc</li>
+            <li onclick="showDetails(this)">CDK_family_3qtq</li>
+            <li onclick="showDetails(this)">CDK_family_3qts</li>
+            <li onclick="showDetails(this)">CDK_family_3r9h</li>
+            <li onclick="showDetails(this)">CDK_family_4aua</li>
+            <li onclick="showDetails(this)">CDK_family_4bcp</li>
+        </ul>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main">
+        <div class="intro" id="mainContent">
+            <h1>Welcome to LigTraj</h1>
+            <p>LigTraj is a database focused on ligand-protein molecular dynamics trajectories. You can quickly search and explore entries using the sidebar.</p>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/pdb_info.js"></script> 
+    <script src="js/script.js"></script>
+</body>
+</html>

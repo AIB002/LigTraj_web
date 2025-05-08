@@ -1,0 +1,128 @@
+/* ================== General page style ================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../img/background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ================== Top navigation bar ================== */
+.topnav {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Hamburger menu icon (three horizontal bars) */
+.menu-icon {
+    width: 35px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #555;
+}
+
+.bar {
+    height: 4px;
+    width: 100%;
+    background-color: gray;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+
+/* Dropdown menu (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 120px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(0, 255, 255, 0.4);
+}
+
+/* ================== Sidebar style ================== */
+.sidebar {
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明 */
+    padding: 20px;
+    overflow-y: auto;
+    color: white;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #00ffff;
+}
+
+.sidebar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 8px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.sidebar li:hover {
+    background-color: rgba(0, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+/* ================== Main content area ================== */
+.main {
+    margin-left: 320px; /* 和 sidebar 对齐 */
+    padding: 20px;
+    color: white;
+    min-height: 100vh;
+    max-width: calc(100% - 340px); /* 限制正文区不会覆盖 sidebar */
+    box-sizing: border-box;
+}
+
+.intro {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 850px;  /* 限制 Intro 最大宽度 */
+    box-sizing: border-box;
+}
+
+.intro h1 {
+    color: #00ffff;
+}
+
+#smiles-canvas {
+    background-color: white !important;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}

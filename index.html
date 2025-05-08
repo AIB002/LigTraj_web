@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LigTraj | Molecular Dynamics Portal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: url('img/homepage.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+      line-height: 1.6;
+      text-shadow: 0 0 8px rgba(0,0,0,0.3);
+    }
+
+    .enter-button {
+      padding: 15px 40px;
+      font-size: 20px;
+      background-color: #00cccc;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .enter-button:hover {
+      background-color: #009999;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1rem;
+        padding: 0 20px;
+      }
+      .enter-button {
+        font-size: 18px;
+        padding: 12px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to LigTraj</h1>
+  <p>
+    A unified analysis platform for molecular trajectories, from small molecules to proteins and cellular systems.
+  </p>
+  <button class="enter-button" onclick="window.location.href='ligtraj.html'">Enter LigTraj</button>
+</body>
+</html>
