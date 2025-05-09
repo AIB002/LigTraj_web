@@ -24,6 +24,19 @@
     .box {
       margin-top: 30px;
     }
+    button {
+      margin-top: 10px;
+      padding: 8px 14px;
+      font-size: 14px;
+      border: none;
+      background-color: #00cccc;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0099aa;
+    }
   </style>
 </head>
 <body>
@@ -36,18 +49,27 @@
     const family = params.get("family");
 
     if (pdb && family) {
-      const path = `shizq@10.77.14.128:/public/home/shizq/GROMACS_MD/GAFF_PROLIG/${family}/${pdb}`;
+      const fixedFamily = family.replace(/ /g, '_');
+      const path = `shizq@10.77.14.128:/public/home/shizq/GROMACS_MD/GAFF_PROLIG/${fixedFamily}/${pdb}`;
       const scpCmd = `scp -r -P 43276 ${path} .`;
 
       document.getElementById("infoArea").innerHTML = `
         <p><strong>🔗 Remote Path:</strong></p>
         <code>${path}</code>
         <p><strong>📦 SCP Command:</strong></p>
-        <code>${scpCmd}</code>
-        <p style="margin-top:20px; font-size: 14px; color: #666;">Note: You must be within the internal HPC cluster or VPN to access.</p>
+        <code id="scpCmd">${scpCmd}</code>
+        <button onclick="copyCmd()">📋 Copy SCP Command</button>
+        <p style="margin-top:20px; font-size: 13px; color: #666;">Note: You must be within the internal HPC cluster or VPN to access.</p>
       `;
     } else {
-      document.getElementById("infoArea").innerHTML = `<p>❌ Missing parameters.</p>`;
+      document.getElementById("infoArea").innerHTML = `<p>❌ Missing parameters: PDB ID or family not provided.</p>`;
+    }
+
+    function copyCmd() {
+      const cmdText = document.getElementById("scpCmd").innerText;
+      navigator.clipboard.writeText(cmdText).then(() => {
+        alert("✅ SCP command copied to clipboard!");
+      });
     }
   </script>
 </body>
