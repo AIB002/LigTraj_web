@@ -45,35 +45,97 @@ function searchPDB() {
 //     contentDiv.innerHTML = html;
 // }
 
+// function showDetails(element) {
+//     let pdbName = element.textContent;  // e.g., "CDK Family_3qtq"
+//     let parts = pdbName.split('_');
+//     let pdbCode = parts[1];  // 取出 "3qtq"
+
+//     let contentDiv = document.getElementById('mainContent');
+//     let html = `<h1>${pdbName}</h1>`;
+
+//     if (pdbInfo[pdbCode]) {
+//         html += `
+//             <p><strong>Protein:</strong> ${pdbInfo[pdbCode]['Protein Name']}</p>
+//             <p><strong>Affinity Data:</strong> ${pdbInfo[pdbCode]['Affinity Data']}</p>
+//             <p><strong>pKd/pKi/pIC50:</strong> ${pdbInfo[pdbCode]['pKd']}</p>
+//             <p><strong>SMILES:</strong> ${pdbInfo[pdbCode]['SMILES']}</p>
+//             <p><strong>HB donor/acceptor:</strong> ${pdbInfo[pdbCode]['HB donor/acceptor']}</p>
+//         `;
+
+//         if (pdbInfo[pdbCode]['SMILES'] !== "N/A") {
+//             html += `<canvas id="smiles-canvas" width="300" height="300"></canvas>`;
+//         }
+//     } else {
+//         html += `<p>No detailed information available.</p>`;
+//     }
+
+//     contentDiv.innerHTML = html;
+
+//     // 如果有 SMILES，则绘图
+//     if (pdbInfo[pdbCode] && pdbInfo[pdbCode]['SMILES'] !== "N/A") {
+//         let smiles = pdbInfo[pdbCode]['SMILES'];
+//         let drawer = new SmilesDrawer.Drawer({ width: 300, height: 300 });
+//         SmilesDrawer.parse(smiles, function (tree) {
+//             drawer.draw(tree, 'smiles-canvas', 'light');
+//         }, function (err) {
+//             console.error('SMILES 解析失败:', err);
+//         });
+//     }
+
+    
+// }
+
 function showDetails(element) {
     let pdbName = element.textContent;  // e.g., "CDK Family_3qtq"
     let parts = pdbName.split('_');
-    let pdbCode = parts[1];  // 取出 "3qtq"
+    let pdbCode = parts[1];  // e.g., "3qtq"
 
     let contentDiv = document.getElementById('mainContent');
-
     let html = `<h1>${pdbName}</h1>`;
 
     if (pdbInfo[pdbCode]) {
         html += `
+            <p><strong>Protein:</strong> ${pdbInfo[pdbCode]['Protein Name']}</p>
             <p><strong>Affinity Data:</strong> ${pdbInfo[pdbCode]['Affinity Data']}</p>
             <p><strong>pKd/pKi/pIC50:</strong> ${pdbInfo[pdbCode]['pKd']}</p>
             <p><strong>SMILES:</strong> ${pdbInfo[pdbCode]['SMILES']}</p>
             <p><strong>HB donor/acceptor:</strong> ${pdbInfo[pdbCode]['HB donor/acceptor']}</p>
         `;
 
-        // 如果有SMILES，准备画图的容器
         if (pdbInfo[pdbCode]['SMILES'] !== "N/A") {
-            html += `<canvas id="smiles-canvas" width="300" height="300"></canvas>`;
-        }
+            html += `
+                <div style="text-align: center; margin-top: 20px;">
+                    <canvas id="smiles-canvas" width="300" height="300" style="display:block; margin:auto;"></canvas>
 
+                    <a href="https://ligtraj.org/data/${pdbCode}_md_package.zip" download style="text-decoration: none;">
+                        <button style="
+                            margin-top: 20px;
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 10px;
+                            padding: 10px 18px;
+                            font-size: 16px;
+                            background-color: #00cccc;
+                            color: white;
+                            border: none;
+                            border-radius: 6px;
+                            cursor: pointer;
+                            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+                        ">
+                            <img src="img/traj_icon.png" alt="traj" width="24" height="24" style="vertical-align: middle;">
+                            Download Trajectory Package
+                        </button>
+                    </a>
+                </div>
+            `;
+        }
     } else {
         html += `<p>No detailed information available.</p>`;
     }
 
     contentDiv.innerHTML = html;
 
-    // 如果有SMILES，绘制结构
+    // SMILES 绘图
     if (pdbInfo[pdbCode] && pdbInfo[pdbCode]['SMILES'] !== "N/A") {
         let smiles = pdbInfo[pdbCode]['SMILES'];
         let drawer = new SmilesDrawer.Drawer({ width: 300, height: 300 });
@@ -84,6 +146,8 @@ function showDetails(element) {
         });
     }
 }
+
+
 
 
 
