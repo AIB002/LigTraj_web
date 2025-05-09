@@ -218,14 +218,12 @@
 
     if (pdb && family) {
       const fixedFamily = family.replace(/ /g, '_');
-      const scpPath = `shizq@dxp4800plus-7c57.local:/public/home/shizq/GROMACS_MD/GAFF_PROLIG/${fixedFamily}/${pdb}`;
-      const scpCmd = `scp -r -P 43276 ${scpPath} ./`;
+      const scpPath = `scp -r -P 43276 shizq@10.77.14.128:/public/home/shizq/GROMACS_MD/GAFF_PROLIG/${fixedFamily}/${pdb} ./`;
+      const scpCmd = scpPath;  
       const ugreenUrl = 'http://ug.link/DXP4800PLUS-7C5/filemgr/share-download/?id=0b7065a45fca497cbda47a4356589ee8';
 
       document.getElementById("infoArea").innerHTML = `
-        <p><strong>🔗 Remote Path (SCP):</strong></p>
-        <code>${scpPath}</code>
-        <p><strong>📦 SCP Command:</strong></p>
+        <p><strong>🔗 SCP Command:</strong></p>
         <code id="scpCmd">${scpCmd}</code>
       `;
 
