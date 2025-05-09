@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -70,6 +70,201 @@
       navigator.clipboard.writeText(cmdText).then(() => {
         alert("✅ SCP command copied to clipboard!");
       });
+    }
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trajectory Access Info</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+      max-width: 640px;
+      width: 90%;
+      padding: 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 170, 170, 0.1);
+      border-radius: 50%;
+    }
+    .container::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 204, 153, 0.1);
+      border-radius: 50%;
+    }
+    h1 {
+      margin: 0 0 20px;
+      color: #008b8b;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .info-box {
+      background: #fafbfd;
+      border: 1px solid #e3e9f1;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 20px 0;
+      text-align: left;
+    }
+    .info-box p {
+      margin: 12px 0 6px;
+      color: #333;
+      font-size: 0.95rem;
+    }
+    .info-box code {
+      display: block;
+      background: #eef2f5;
+      padding: 14px 20px;
+      border-radius: 6px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      word-break: break-all;
+      color: #2d2d2d;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 22px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      transition: transform 0.15s, box-shadow 0.25s;
+    }
+    .btn-copy {
+      background: linear-gradient(45deg, #00cccc, #0099aa);
+    }
+    .btn-copy:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 24px rgba(0, 0, 0, 0.12);
+    }
+    .btn-ugreen {
+      background: linear-gradient(45deg, #00cc99, #009966);
+    }
+    .btn-ugreen:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 24px rgba(0, 0, 0, 0.12);
+    }
+    .btn svg {
+      width: 1.2em;
+      height: 1.2em;
+      fill: #fff;
+    }
+    .note {
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Trajectory Access Instructions</h1>
+    <div class="info-box" id="infoArea">
+      <!-- 动态填充路径与命令 -->
+    </div>
+    <div class="buttons" id="buttonGroup">
+      <!-- 按钮将动态插入 -->
+    </div>
+    <p class="note">🔒 Note: You must be within the internal HPC cluster or VPN to access.</p>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const pdb = params.get("pdb");
+    const family = params.get("family");
+
+    if (pdb && family) {
+      const fixedFamily = family.replace(/ /g, '_');
+      const scpPath = `shizq@dxp4800plus-7c57.local:/public/home/shizq/GROMACS_MD/GAFF_PROLIG/${fixedFamily}/${pdb}`;
+      const scpCmd = `scp -r -P 43276 ${scpPath} ./`;
+      const ugreenUrl = 'http://ug.link/DXP4800PLUS-7C5/filemgr/share-download/?id=0b7065a45fca497cbda47a4356589ee8';
+
+      document.getElementById("infoArea").innerHTML = `
+        <p><strong>🔗 Remote Path (SCP):</strong></p>
+        <code>${scpPath}</code>
+        <p><strong>📦 SCP Command:</strong></p>
+        <code id="scpCmd">${scpCmd}</code>
+      `;
+
+      const buttons = document.getElementById("buttonGroup");
+
+      // Copy SCP command button
+      const copyBtn = document.createElement("button");
+      copyBtn.className = "btn btn-copy";
+      copyBtn.innerHTML = `
+        <svg viewBox="0 0 24 24"><path d="M19,3H14l-1-1H6C4.9,2,4,2.9,4,4v14h2V4h9V3z M16,7H8c-1.1,0-2,0.9-2,2v12c0,1.1,0.9,2,2,2h8 c1.1,0,2-0.9,2-2V9C18,7.9,17.1,7,16,7z M16,21H8V9h8V21z"/></svg>
+        Copy SCP
+      `;
+      copyBtn.onclick = () => {
+        navigator.clipboard.writeText(scpCmd).then(() => {
+          copyBtn.innerText = "✅ Copied!";
+          setTimeout(() => {
+            copyBtn.innerHTML = `
+              <svg viewBox="0 0 24 24"><path d="M19,3H14l-1-1H6C4.9,2,4,2.9,4,4v14h2V4h9V3z M16,7H8c-1.1,0-2,0.9-2,2v12c0,1.1,0.9,2,2,2h8 c1.1,0,2-0.9,2-2V9C18,7.9,17.1,7,16,7z M16,21H8V9h8V21z"/></svg>
+              Copy SCP
+            `;
+          }, 1500);
+        });
+      };
+
+      // Via UGREEN download button
+      const ugreenBtn = document.createElement("a");
+      ugreenBtn.className = "btn btn-ugreen";
+      ugreenBtn.innerHTML = `
+        <svg viewBox="0 0 24 24"><path d="M5,20h14v-2H5V20z M12,4l-6,6h4v6h4v-6h4L12,4z"/></svg>
+        Via UGREEN
+      `;
+      ugreenBtn.href = ugreenUrl;
+      ugreenBtn.target = "_blank";
+
+      buttons.appendChild(copyBtn);
+      buttons.appendChild(ugreenBtn);
+
+    } else {
+      document.getElementById("infoArea").innerHTML = `<p>❌ Missing parameters: PDB ID or family not provided.</p>`;
     }
   </script>
 </body>
