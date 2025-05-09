@@ -10,6 +10,12 @@ const pdbData = {
     ],
     "JAK":[
         "2b7a", "2w1i", "3jy9", "3lxk", "3q32", "3tjd", "3ugc", "3zc6", "3zmm", "4bbf", "4c61", "4d0w", "4d1s", "4e5w", "4e6d", "4e6q", "4f09", "4fk6", "4gmy", "4hge", "4hvd", "4hvh", "4i6q", "4ivb", "4ivd", "4k6z", "4ytc", "4yti", "4zim", "5cf5", "5cf8", "5l3a", "5lwn", "2xa4", "3fup", "3io7", "3iok", "3krr", "3lpb", "3lxl", "3pjc", "3rvg", "3tjc", "3zep", "4aqc", "4bbe", "4d0x", "4e4l", "4e4n", "4ehz", "4ei4", "4f08", "4gfm", "4hvg", "4hvi", "4i5c", "4iva", "4ivc", "4k77", "4qps", "4qt1", "4rio", "4ytf", "4yth", "5aep", "5cf4", "5cf6", "5e1e", "5hx8", "5khx", "5lwm"
+    ],
+    "RTKs":[
+        "3qup", "4cd0", "5amn", "5eyd", "5fdp", "5eyc"
+    ],
+    "PI3K":[
+        "3prz", "3qaq", "3qk0", "3zvv", "4anv", "4anx", "4aof", "4bfr", "4jps", "4ps7", "4wwo", "4wwp", "5dxh", "5dxu", "5eds", "5g2n", "6gvg", "6gvi", "6mum", "6oac", "6oco", "6pys", "6pyu", "6q74", "3dbs", "3l08", "3l54", "3lj3", "3nzs", "3nzu", "3oaw", "3ps6", "3qar", "3s2a", "3zw3", "4ajw", "4anu", "4anw", "4gb9", "4l23", "4ps3", "4ps8", "4v0i", "4waf", "4wwn", "4xe0", "5dxt", "5itd", "6ftn", "6g6w", "6gvf", "6gvh", "6gy0", "6mul", "6ocu", "6pyr", "6q6y", "6q73"
     ]
 };
 

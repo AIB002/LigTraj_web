@@ -2021,5 +2021,453 @@ const pdbInfo = {
         "pKd": 8.05,
         "SMILES": "CCC(=O)Nc1cc(ccc1C(=O)N1CCOCC1)/N=C/1\\C=C(CN(C1=O)C)c1cccc(c1C)NC(=O)c1ccc(cc1)C(C)(C)C",
         "HB donor/acceptor": "2.0/4.0"
+    },
+    "6ocu": {
+        "Protein Name": "Phosphatidylinositol 3-kinase regulatory subunit alpha, human PI3K-Delta",
+        "Affinity Data": "IC50=9nM",
+        "pKd": 8.05,
+        "SMILES": "N#Cc1ncc(nc1c1cnn(c1)C)N1CCN([C@@H](C1)C)C(=O)[C@@H]1C[C@H]1C",
+        "HB donor/acceptor": "0.0/5.0"
+    },
+    "6pyr": {
+        "Protein Name": "Human PI3Kdelta",
+        "Affinity Data": "IC50=1nM",
+        "pKd": 9.0,
+        "SMILES": "Cc1ncc(cn1)c1ccn2c(n1)c(cn2)c1ccc2c(c1)[C@](C)(Cc1ccccc1)C(=O)N2",
+        "HB donor/acceptor": "1.0/5.0"
+    },
+    "6pys": {
+        "Protein Name": "Human PI3Kalpha",
+        "Affinity Data": "IC50=70nM",
+        "pKd": 7.15,
+        "SMILES": "Cc1ncc(cn1)c1ccn2c(n1)c(cn2)c1ccc2c(c1)[C@](C)(Cc1ccccc1)C(=O)N2",
+        "HB donor/acceptor": "1.0/5.0"
+    },
+    "6pyu": {
+        "Protein Name": "human PI3Kdelta",
+        "Affinity Data": "IC50=10nM",
+        "pKd": 8.0,
+        "SMILES": "O=C(N1CCC[C@@]21C(=O)Nc1c2cc(cc1)c1ccc2c(c1)nccn2)C1CC1",
+        "HB donor/acceptor": "1.0/4.0"
+    },
+    "3cst": {
+        "Protein Name": "PI3Kgama",
+        "Affinity Data": "IC50=0.039uM",
+        "pKd": 7.40894,
+        "SMILES": "O=[CH2][Ru]1234([NH]5c6ccc(cc6c6c5c5[n+]1cc(F)cc5c1c6C(=O)N(C1=O)C)O)[CH]1=[CH]4[CH2]2[CH]3=C1C(=O)NC(CO)(CO)C",
+        "HB donor/acceptor": "5.0/7.0"
+    },
+    "3dbs": {
+        "Protein Name": "PI3K gamma",
+        "Affinity Data": "IC50=75nM",
+        "pKd": 7.12494,
+        "SMILES": "CS(=O)(=O)N1CC[NH+](CC1)Cc1cc2c(s1)c(nc(n2)c1cccc2c1cn[nH]2)N1CCOCC1",
+        "HB donor/acceptor": "2.0/5.0"
+    },
+    "3i5r": {
+        "Protein Name": "phosphatidylinositol 3-kinase (PI3K) SH3 domain",
+        "Affinity Data": "Kd=40uM",
+        "pKd": 4.4,
+        "SMILES": "OC[C@@H](C(=O)O)NC(=O)[C@@H]1CCCN1C(=O)[C@@H](NC(=O)[C@@H]1CCCN1C(=O)[C@@H]1CCCN1C(=O)[C@@H](NC(=O)[C@@H]1CCCN1C(=O)[C@@H](NC(=O)[C@H](CCCC[NH3+])[NH3+])CCC[NH+]=C(N)N)CC(C)C)CC(C)C",
+        "HB donor/acceptor": "7.0/11.0"
+    },
+    "3l08": {
+        "Protein Name": "Phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit gamma isoform (Pi3K gamma)",
+        "Affinity Data": "Ki=60pM",
+        "pKd": 10.22,
+        "SMILES": "COc1ncc(cc1NS(=O)(=O)c1ccc(cc1F)F)c1ccc2c(c1)c(ccn2)c1ccnnc1",
+        "HB donor/acceptor": "1.0/6.0"
+    },
+    "3l54": {
+        "Protein Name": "Phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit gamma isoform (Pi3K gamma)",
+        "Affinity Data": "IC50=7nM",
+        "pKd": 8.15,
+        "SMILES": "n1ccc(cc1)c1ccnc2c1cc(cc2)c1cnc2c(c1)cn[nH]2",
+        "HB donor/acceptor": "1.0/4.0"
+    },
+    "3lj3": {
+        "Protein Name": "mTOR related PI3Kinase gamma",
+        "Affinity Data": "IC50=0.94nM",
+        "pKd": 9.03,
+        "SMILES": "C[N@@H+]1CCN(CC1)c1ccnc2c1c(/C=C/1\\Oc3c(C1=O)c(O)cc(c3)O)cn2C",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "3nzs": {
+        "Protein Name": "Phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit gamma isoform (PI3K gamma)",
+        "Affinity Data": "IC50=75nM",
+        "pKd": 7.12,
+        "SMILES": "COc1cccc(c1)Nc1nc(nc2c1cnn2C)N1CCS(=O)(=O)CC1",
+        "HB donor/acceptor": "1.0/5.0"
+    },
+    "3nzu": {
+        "Protein Name": "Phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit gamma isoform (PI3K gamma)",
+        "Affinity Data": "IC50=1.4nM",
+        "pKd": 8.85,
+        "SMILES": "Cn1ncc2c1nc(nc2NCCCS(=O)(=O)C)c1cccc2c1cn[nH]2",
+        "HB donor/acceptor": "2.0/6.0"
+    },
+    "3oaw": {
+        "Protein Name": "Phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit gamma isoform (PI3K gamma)",
+        "Affinity Data": "Ki=7nM",
+        "pKd": 8.15,
+        "SMILES": "Nc1nc(C)c2c(n1)n(C(C)C)c(=O)c(n2)c1c[nH]nc1",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "3prz": {
+        "Protein Name": "Phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit gamma isoform, PI3Kgamma",
+        "Affinity Data": "Ki=26nM",
+        "pKd": 7.59,
+        "SMILES": "Cc1nc(N)c2c(n1)c(ccc2)C(=O)Nc1ccn[nH]1",
+        "HB donor/acceptor": "3.0/4.0"
+    },
+    "3ps6": {
+        "Protein Name": "Phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit gamma isoform, PI3Kgamma",
+        "Affinity Data": "Ki=18nM",
+        "pKd": 7.74,
+        "SMILES": "COc1ccc(cn1)NC(=O)c1cccc2c1nc(C)nc2N",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "3qaq": {
+        "Protein Name": "PI3K-gamma catalytic domain",
+        "Affinity Data": "IC50=0.10uM",
+        "pKd": 7.0,
+        "SMILES": "N#CCNc1ncnc(n1)n1c(Nc2cccc(c2)O)nc2c1cccc2",
+        "HB donor/acceptor": "3.0/6.0"
+    },
+    "3qar": {
+        "Protein Name": "PI3K-gamma catalytic domain",
+        "Affinity Data": "IC50=0.32uM",
+        "pKd": 6.49,
+        "SMILES": "Cc1nc(N)nc(n1)n1c(Nc2ccn[nH]2)nc2c1cccc2",
+        "HB donor/acceptor": "3.0/5.0"
+    },
+    "3qk0": {
+        "Protein Name": "PI3K-gamma catalytic domain",
+        "Affinity Data": "Ki=2.0nM",
+        "pKd": 8.7,
+        "SMILES": "CC(=O)Nc1nc2c(s1)cc(cc2)c1cnc(c(c1)NS(=O)(=O)c1ccc(cc1)F)Cl",
+        "HB donor/acceptor": "2.0/5.0"
+    },
+    "3s2a": {
+        "Protein Name": "PI3K-gamma catalytic domain",
+        "Affinity Data": "IC50=8.1nM",
+        "pKd": 8.09,
+        "SMILES": "Fc1ccc(cc1)S(=O)(=O)Nc1cc(cnc1Cl)c1ccc2c(c1)c(ccn2)N1CCOCC1",
+        "HB donor/acceptor": "1.0/4.0"
+    },
+    "3zvv": {
+        "Protein Name": "PI3Kinase Gamma",
+        "Affinity Data": "IC50=915uM",
+        "pKd": 3.04,
+        "SMILES": "Cc1cc(C)n2c(n1)cc(n2)N",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "3zw3": {
+        "Protein Name": "PI3Kinase Gamma",
+        "Affinity Data": "IC50=34nM",
+        "pKd": 7.47,
+        "SMILES": "CC(=O)Nc1cn2c(n1)ccc(c2)/C=C/1\\SC(=O)NC1=O",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "4ajw": {
+        "Protein Name": "phosphoinositide-3 kinase (PI3K) delta",
+        "Affinity Data": "IC50=1395nM",
+        "pKd": 5.86,
+        "SMILES": "O=c1[nH]c(nc(c1)N1CCOCC1)Cc1nc2c(n1C)cccc2",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "4anu": {
+        "Protein Name": "phosphoinositide 3-kinase gamma (PI3K gamma)",
+        "Affinity Data": "IC50=21nM",
+        "pKd": 7.68,
+        "SMILES": "CNC(=O)c1nc(cnc1N)c1cccc(c1)c1nnn[nH]1",
+        "HB donor/acceptor": "3.0/6.0"
+    },
+    "4anv": {
+        "Protein Name": "phosphoinositide 3-kinase gamma (PI3K gamma)",
+        "Affinity Data": "IC50=441nM",
+        "pKd": 6.36,
+        "SMILES": "COc1ccc(cc1)c1cccc(c1)S(=O)(=O)N1CCN(CC1)c1nccnc1c1ccc(cc1)OC",
+        "HB donor/acceptor": "0.0/4.0"
+    },
+    "4anw": {
+        "Protein Name": "phosphoinositide 3-kinase gamma (PI3K gamma)",
+        "Affinity Data": "IC50=18nM",
+        "pKd": 7.74,
+        "SMILES": "CNC(=O)c1nc(cnc1N)c1ccc(c(c1)S(=O)(=O)Nc1cccc(c1F)F)Cl",
+        "HB donor/acceptor": "3.0/5.0"
+    },
+    "4anx": {
+        "Protein Name": "phosphoinositide 3-kinase gamma (PI3K gamma)",
+        "Affinity Data": "IC50=18nM",
+        "pKd": 7.74,
+        "SMILES": "Nc1ncc(cn1)c1cccc(c1)S(=O)(=O)N1CCN(CC1)c1nccnc1c1ccc(cc1)C(C)C",
+        "HB donor/acceptor": "1.0/6.0"
+    },
+    "4aof": {
+        "Protein Name": "phosphoinositide 3-kinase gamma (PI3K gamma)",
+        "Affinity Data": "IC50=0.08uM",
+        "pKd": 7.1,
+        "SMILES": "CC(=O)Nc1nn2c(n1)ccc(c2)c1cncc(c1)S(=O)(=O)C",
+        "HB donor/acceptor": "1.0/6.0"
+    },
+    "4bfr": {
+        "Protein Name": "Pyrimidone Indoline Amide PI3K beta",
+        "Affinity Data": "IC50=23nM",
+        "pKd": 7.64,
+        "SMILES": "C[C@H]1Cc2c(N1C(=O)Cc1nc(cc(=O)[nH]1)N1CCOCC1)cccc2",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "4gb9": {
+        "Protein Name": "human PI3K catalytic subunit gamma isoform",
+        "Affinity Data": "IC50=540nM",
+        "pKd": 6.27,
+        "SMILES": "CN(c1nc2c(n1c1nc(N3CCOCC3)c3c(n1)n(C)c(n3)C[N@@H+]1CC[C@H](CC1)C(O)(C)C)cccc2)C",
+        "HB donor/acceptor": "2.0/5.0"
+    },
+    "4jps": {
+        "Protein Name": "Lipid Kinase PI3K p110alpha",
+        "Affinity Data": "IC50=0.005uM",
+        "pKd": 8.3,
+        "SMILES": "NC(=O)[C@@H]1CCCN1C(=O)Nc1nc(c(s1)c1ccnc(c1)C(C(F)(F)F)(C)C)C",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "4l23": {
+        "Protein Name": "phosphatidylinositol 3-kinase (PI3K), p110alpha",
+        "Affinity Data": "IC50=17.9nM",
+        "pKd": 7.75,
+        "SMILES": "Oc1cccc(c1)c1nc(N2CCOCC2)c2c(n1)c1cccnc1o2",
+        "HB donor/acceptor": "1.0/4.0"
+    },
+    "4ps3": {
+        "Protein Name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform PI3K-gamma",
+        "Affinity Data": "Ki=2nM",
+        "pKd": 8.7,
+        "SMILES": "CCCn1cnc(c1)CCNC(=O)Nc1nc2c(s1)cc(cc2)c1cncc(c1)OC",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "4ps7": {
+        "Protein Name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform PI3K-gamma",
+        "Affinity Data": "Ki=39nM",
+        "pKd": 7.41,
+        "SMILES": "CC(=O)Nc1nc2c(s1)cc(cc2)c1cccnc1",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "4ps8": {
+        "Protein Name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform PI3K-gamma",
+        "Affinity Data": "Ki=1nM",
+        "pKd": 9.0,
+        "SMILES": "COc1cc(cnc1OC)c1ccc2c(c1)sc(n2)NC(=O)C",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "4urk": {
+        "Protein Name": "PHOSPHATIDYLINOSITOL 4,5-BISPHOSPHATE 3-KINASE CATALYTIC SUBUNIT GAMMA ISOFORM PI3K-gamma",
+        "Affinity Data": "IC50=1.09uM",
+        "pKd": 5.96,
+        "SMILES": "Cc1cc([C@H](Nc2ccccc2C(=O)O)C)c2n(c1)c(=O)cc(n2)N1CCOCC1",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "4v0i": {
+        "Protein Name": "Phosphoinositide 3-kinase (PI3K) catalytic subunit delta",
+        "Affinity Data": "IC50=468nM",
+        "pKd": 6.33,
+        "SMILES": "C[C@H]1Cc2c(N1C(=O)Cc1nc(cc(=O)[nH]1)N1CCOCC1)cccc2",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "4waf": {
+        "Protein Name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform PI3K-alpha I800M-F930V double mutant",
+        "Affinity Data": "IC50>=10uM",
+        "pKd": 5.0,
+        "SMILES": "C[C@@H]1Cn2ncc(c2CN1c1ccnc2c1cc[nH]2)c1ccc(cc1)S(=O)(=O)N(C)C",
+        "HB donor/acceptor": "1.0/4.0"
+    },
+    "4wwn": {
+        "Protein Name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform PI3K-gamma",
+        "Affinity Data": "IC50=0.85uM",
+        "pKd": 6.07,
+        "SMILES": "Fc1ccc2c(c1)nc(c(c2)[C@@H](Nc1ncnc2c1[nH]cn2)C)c1ccccn1",
+        "HB donor/acceptor": "2.0/5.0"
+    },
+    "4wwo": {
+        "Protein Name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform PI3K-gamma",
+        "Affinity Data": "IC50=0.0380uM",
+        "pKd": 7.42,
+        "SMILES": "Fc1cccc(c1)c1nc2c(cc1[C@@H](Nc1ncnc3c1[nH]cn3)C)cccc2Cl",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "4wwp": {
+        "Protein Name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform PI3K-gamma",
+        "Affinity Data": "IC50=0.12uM",
+        "pKd": 6.92,
+        "SMILES": "C[C@@H](c1cc2cccc(c2nc1c1cccnc1C)Cl)Nc1ncnc2c1[nH]cn2",
+        "HB donor/acceptor": "2.0/5.0"
+    },
+    "4xe0": {
+        "Protein Name": "p110 subunit of PI3K delta",
+        "Affinity Data": "IC50=19nM",
+        "pKd": 7.72,
+        "SMILES": "CC[C@@H](c1nc2cccc(c2c(=O)n1c1ccccc1)F)Nc1ncnc2c1[nH]cn2",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "4ykn": {
+        "Protein Name": "Pi3K alpha lipid kinase",
+        "Affinity Data": "IC50=10nM",
+        "pKd": 8.0,
+        "SMILES": "COc1ccc(cn1)c1cc(CNc2ccc(cc2)S(=O)(=O)Nc2nnc(s2)C)cc(c1)C(=O)O",
+        "HB donor/acceptor": "2.0/7.0"
+    },
+    "5dxh": {
+        "Protein Name": "PI3K alpha",
+        "Affinity Data": "Ki=1nM",
+        "pKd": 9.0,
+        "SMILES": "COC(=O)Nc1ccc2c(c1)OCCc1c2sc(c1)c1nncn1c1ccccc1Cl",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "5dxt": {
+        "Protein Name": "PI3K alpha",
+        "Affinity Data": "Ki=0.2nM",
+        "pKd": 9.7,
+        "SMILES": "NC(=O)[C@@H](Oc1ccc2c(c1)OCCn1c2nc(c1)c1ncnn1C(C)C)C",
+        "HB donor/acceptor": "1.0/4.0"
+    },
+    "5dxu": {
+        "Protein Name": "PI3K delta",
+        "Affinity Data": "Ki=4nM",
+        "pKd": 8.4,
+        "SMILES": "NC(=O)[C@@H](Oc1ccc2c(c1)OCCn1c2nc(c1)c1ncnn1C(C)C)C",
+        "HB donor/acceptor": "1.0/4.0"
+    },
+    "5eds": {
+        "Protein Name": "human PI3K-gamma",
+        "Affinity Data": "IC50=2.88uM",
+        "pKd": 5.54,
+        "SMILES": "N#Cc1c(ncnc1N)N[C@H](c1nc2c(n1c1cccc(c1)S(=O)(=O)C)cc(cc2)F)C",
+        "HB donor/acceptor": "2.0/6.0"
+    },
+    "5g2n": {
+        "Protein Name": "PI3Kinase Gamma",
+        "Affinity Data": "IC50=94nM",
+        "pKd": 7.03,
+        "SMILES": "COc1c(OCCC[NH+]2CCOCC2)ccc2c1nc(NC(=O)c1cnc(nc1)N)n1c2ncc1",
+        "HB donor/acceptor": "3.0/5.0"
+    },
+    "5itd": {
+        "Protein Name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform, PI3K alpha",
+        "Affinity Data": "IC50=0.262uM",
+        "pKd": 6.58,
+        "SMILES": "N#Cc1cc(cnc1OC)c1ccc2c(c1)c(ncn2)c1cccc(c1)C(=O)N1CCN(CC1)C(=O)C",
+        "HB donor/acceptor": "0.0/6.0"
+    },
+    "5l72": {
+        "Protein Name": "phosphoinositide-3-kinases (PI3K delta)",
+        "Affinity Data": "IC50=158nM",
+        "pKd": 6.8,
+        "SMILES": "COc1ncc(cc1NS(=O)(=O)C)c1cc(NC(=O)C[NH+]2CCOCC2)c2c(c1)coc2",
+        "HB donor/acceptor": "3.0/4.0"
+    },
+    "6bu0": {
+        "Protein Name": "PI3KC2alpha C2 domain",
+        "Affinity Data": "Kd=1.1uM",
+        "pKd": 5.96,
+        "SMILES": "OP(O[C@@H]1[C@H](OP(O)(O)O)[C@H](OP(O)(O)O)[C@H]([C@H]([C@H]1OP(O)(O)O)OP(O)(O)O)OP(O)(O)O)(O)O",
+        "HB donor/acceptor": "0.0/18.0"
+    },
+    "6ftn": {
+        "Protein Name": "PI3Kd(Phosphoinositide 3-kinases)",
+        "Affinity Data": "IC50=199.5nM",
+        "pKd": 6.7,
+        "SMILES": "CC(=O)Nc1sc(c(n1)C)c1cc(C)c2c(c1)CN(C2=O)[C@H](C1CC1)C",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "6g6w": {
+        "Protein Name": "PI3KDELTA",
+        "Affinity Data": "IC50=0.2nM",
+        "pKd": 9.7,
+        "SMILES": "Oc1cc(cc(c1)c1c[nH]c2c1c(ncn2)N[C@H](c1nn2ccc(c2c(=O)n1c1ccccc1)C)C)NS(=O)(=O)C",
+        "HB donor/acceptor": "4.0/6.0"
+    },
+    "6gvf": {
+        "Protein Name": "PI3K alpha",
+        "Affinity Data": "Ki=28nM",
+        "pKd": 7.55,
+        "SMILES": "Nc1oc2c(n1)cc(cc2)c1nn(c2c1c(N)ncn2)C(C)C",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "6gvg": {
+        "Protein Name": "PI3K alpha",
+        "Affinity Data": "Ki=990nM",
+        "pKd": 6.0,
+        "SMILES": "Nc1nc(C)c2c(n1)n(nc2c1ccc2c(c1)nc(o2)N)C(C)C",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "6gvh": {
+        "Protein Name": "PI3K alpha",
+        "Affinity Data": "Ki=920nM",
+        "pKd": 6.04,
+        "SMILES": "Nc1nc(Cl)c2c(n1)n(nc2c1ccc2c(c1)nc(o2)N)C(C)C",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "6gvi": {
+        "Protein Name": "PI3K alpha",
+        "Affinity Data": "Ki=150nM",
+        "pKd": 6.82,
+        "SMILES": "Nc1nc(N)c2c(n1)n(nc2c1ccc2c(c1)nc(o2)N)C(C)C",
+        "HB donor/acceptor": "3.0/4.0"
+    },
+    "6gy0": {
+        "Protein Name": "mPI3Kd",
+        "Affinity Data": "Kd=47.9nM",
+        "pKd": 7.32,
+        "SMILES": "CC(=O)Nc1sc(c(n1)C)c1cc2CNC(=O)c2c(c1)S(=O)(=O)N",
+        "HB donor/acceptor": "3.0/5.0"
+    },
+    "6mul": {
+        "Protein Name": "PI3K delta",
+        "Affinity Data": "IC50=6.3nM",
+        "pKd": 8.2,
+        "SMILES": "CCn1ncc(c1C)c1nc2c(n1C)ncnc2N1CCC(CC1)n1c(=O)[nH]c2c1cccn2",
+        "HB donor/acceptor": "1.0/6.0"
+    },
+    "6mum": {
+        "Protein Name": "PI3K delta",
+        "Affinity Data": "IC50=3.9nM",
+        "pKd": 8.41,
+        "SMILES": "CCn1ncc(c1C)c1nc2c(n1C)ncnc2O[C@H]1CCN(C1)C(=O)C1CCOCC1",
+        "HB donor/acceptor": "0.0/5.0"
+    },
+    "6oac": {
+        "Protein Name": "PI3Ka catalytic subunit p110alpha",
+        "Affinity Data": "Ki=11.1nM",
+        "pKd": 7.95,
+        "SMILES": "Nc1ncc(c(c1)C(F)F)c1nc(nc(n1)N1CCOC[C@@H]1C)N1CCOCC1",
+        "HB donor/acceptor": "1.0/4.0"
+    },
+    "6oco": {
+        "Protein Name": "Phosphatidylinositol 3-kinase regulatory subunit alpha, human PI3K-Delta",
+        "Affinity Data": "IC50=474nM",
+        "pKd": 6.32,
+        "SMILES": "N#Cc1cnc(nc1N1C[C@@H]2C[C@H]1CN2c1cccc(c1)Cl)c1cccnc1",
+        "HB donor/acceptor": "0.0/4.0"
+    },
+    "6q6y": {
+        "Protein Name": "PI3K delta",
+        "Affinity Data": "IC50=1uM",
+        "pKd": 6.0,
+        "SMILES": "Clc1ncc(cc1NS(=O)(=O)c1ccccc1)c1ccccc1",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "6q73": {
+        "Protein Name": "PI3K delta",
+        "Affinity Data": "IC50=0.126uM",
+        "pKd": 6.9,
+        "SMILES": "Clc1ncc(cc1NS(=O)(=O)C)C1=CCOCC1",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "6q74": {
+        "Protein Name": "PI3K delta",
+        "Affinity Data": "IC50=6.3nM",
+        "pKd": 8.2,
+        "SMILES": "COc1ncc(cc1NS(=O)(=O)c1cn(c(n1)C)Cc1ccccc1)C1=CCOCC1",
+        "HB donor/acceptor": "1.0/4.0"
     }
 };
