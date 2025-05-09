@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trajectory Access Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f8fb;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #00aaaa;
+    }
+    code {
+      background: #eee;
+      padding: 10px 15px;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 10px auto;
+      font-size: 16px;
+    }
+    .box {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trajectory Access Instructions</h1>
+  <div id="infoArea" class="box"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const pdb = params.get("pdb");
+    const family = params.get("family");
+
+    if (pdb && family) {
+      const path = `shizq@10.77.14.128:/public/home/shizq/GROMACS_MD/GAFF_PROLIG/${family}/${pdb}`;
+      const scpCmd = `scp -r -P 43276 ${path} .`;
+
+      document.getElementById("infoArea").innerHTML = `
+        <p><strong>🔗 Remote Path:</strong></p>
+        <code>${path}</code>
+        <p><strong>📦 SCP Command:</strong></p>
+        <code>${scpCmd}</code>
+        <p style="margin-top:20px; font-size: 14px; color: #666;">Note: You must be within the internal HPC cluster or VPN to access.</p>
+      `;
+    } else {
+      document.getElementById("infoArea").innerHTML = `<p>❌ Missing parameters.</p>`;
+    }
+  </script>
+</body>
+</html>
