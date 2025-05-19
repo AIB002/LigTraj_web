@@ -310,7 +310,7 @@ function loadContact() {
       
       <div class="contact-info">
         <p><strong>Institute of Quantitative Biology, Zhejiang University</strong></p>
-        <p><strong>Translational Chemistry Institute, University of Wisconsin-Madison</strong></p>
+        <p><strong>Theoretical Chemistry Institute, University of Wisconsin-Madison</strong></p>
       </div>
     </div>
     
