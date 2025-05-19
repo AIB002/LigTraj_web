@@ -651,3 +651,12 @@ pre code {
     padding: 1.5rem;
   }
 }
+
+/* 添加到 .logo 样式中 */
+a.logo {
+  text-decoration: none;
+}
+
+a.logo:hover {
+  text-decoration: none;
+}

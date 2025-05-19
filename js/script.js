@@ -113,18 +113,59 @@ function renderMoleculeVisualization(pdbCode) {
   if (!pdbInfo[pdbCode] || pdbInfo[pdbCode]['SMILES'] === "N/A") return;
   
   const smiles = pdbInfo[pdbCode]['SMILES'];
-  const theme = document.documentElement.getAttribute('data-theme');
+  const theme = document.documentElement.getAttribute('data-theme') || 'light';
+  
+  // 定义暗模式和亮模式的颜色
+  const colors = {
+    light: {
+      bond: '#333',
+      C: '#555',
+      N: '#3970b9',
+      O: '#d43d2f',
+      S: '#b8a31b',
+      P: '#9e5e26',
+      F: '#4cb74c',
+      Cl: '#58a845',
+      Br: '#984f2d',
+      I: '#7b4f8e',
+      background: '#ffffff'
+    },
+    dark: {
+      bond: '#cccccc',  // 暗模式下使用亮灰色键
+      C: '#dddddd',     // 暗模式下使用亮灰色碳原子
+      N: '#64b5f6',     // 更亮的蓝色
+      O: '#ef5350',     // 更亮的红色
+      S: '#ffeb3b',     // 明亮的黄色
+      P: '#ffb74d',     // 明亮的橙色
+      F: '#81c784',     // 明亮的绿色
+      Cl: '#7cb342',    // 明亮的绿色
+      Br: '#d7815a',    // 明亮的棕色
+      I: '#ba68c8',     // 明亮的紫色
+      background: '#333333'
+    }
+  };
+  
+  // 选择当前主题的颜色
+  const themeColors = colors[theme];
   
   const options = {
     width: 300,
     height: 300,
-    bondThickness: 2,
+    bondThickness: theme === 'dark' ? 2.5 : 2,  // 在暗模式下增加键的粗细
     atomVisualization: 'balls',
-    bondColor: getComputedStyle(document.documentElement).getPropertyValue('--molecule-bond').trim(),
+    scale: 1.2,
+    bondColor: themeColors.bond,
+    backgroundColor: 'transparent',
     atomColors: {
-      'C': getComputedStyle(document.documentElement).getPropertyValue('--molecule-c').trim(),
-      'N': getComputedStyle(document.documentElement).getPropertyValue('--molecule-n').trim(),
-      'O': getComputedStyle(document.documentElement).getPropertyValue('--molecule-o').trim()
+      'C': themeColors.C,
+      'N': themeColors.N,
+      'O': themeColors.O,
+      'S': themeColors.S,
+      'P': themeColors.P,
+      'F': themeColors.F,
+      'Cl': themeColors.Cl,
+      'Br': themeColors.Br,
+      'I': themeColors.I
     }
   };
   
@@ -138,6 +179,12 @@ function renderMoleculeVisualization(pdbCode) {
         '<p class="error">Unable to render molecular structure.</p>');
     }
   });
+  
+  // 设置画布背景
+  const canvas = document.getElementById('smiles-canvas');
+  if (canvas) {
+    canvas.style.backgroundColor = theme === 'dark' ? '#333333' : '#ffffff';
+  }
 }
 
 // ========= Load Content Functions ========= //
