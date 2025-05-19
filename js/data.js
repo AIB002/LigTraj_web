@@ -16,6 +16,9 @@ const pdbData = {
     ],
     "PI3K":[
         "3prz", "3qaq", "3qk0", "3zvv", "4anv", "4anx", "4aof", "4bfr", "4jps", "4ps7", "4wwo", "4wwp", "5dxh", "5dxu", "5eds", "5g2n", "6gvg", "6gvi", "6mum", "6oac", "6oco", "6pys", "6pyu", "6q74", "3dbs", "3l08", "3l54", "3lj3", "3nzs", "3nzu", "3oaw", "3ps6", "3qar", "3s2a", "3zw3", "4ajw", "4anu", "4anw", "4gb9", "4l23", "4ps3", "4ps8", "4v0i", "4waf", "4wwn", "4xe0", "5dxt", "5itd", "6ftn", "6g6w", "6gvf", "6gvh", "6gy0", "6mul", "6ocu", "6pyr", "6q6y", "6q73"
+    ],
+    "MAPK":[
+        "1ouk", "1pmu", "1w7h", "1w83", "1wbo", "1wbt", "1wbv", "1yw2", "1ywr", "1zz2", "2bak", "2g01", "2o0u", "1kv1", "1m7q", "1ouy", "1ove", "1pmn", "1pmv", "1w82", "1w84", "1wbn", "1wbs", "1wbw", "1wzy", "1zyj", "1zzl", "2baj", "2bal", "2ewa", "2gfs", "2gmx", "2h96", "2i0h", "2no3", "2ojg", "2oji", "2qd9", "2rg5", "2yis", "2yix", "3da6", "3dtc", "3e7o", "3e8n", "3eqb", "3fv8", "3g9n", "3gfe", "3hrb", "3i5z", "3iph", "3k3j", "3kvx", "3lhj", "2o2u", "2ojj", "2ok1", "2rg6", "2waj", "2yiw", "3ctq", "3ds6", "3dt1", "3fc1", "3g90", "3g9l", "3i60", "3itz", "3k3i"
     ]
 };
 

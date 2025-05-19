@@ -2469,5 +2469,565 @@ const pdbInfo = {
         "pKd": 8.2,
         "SMILES": "COc1ncc(cc1NS(=O)(=O)c1cn(c(n1)C)Cc1ccccc1)C1=CCOCC1",
         "HB donor/acceptor": "1.0/4.0"
+    },
+    "1kv1": {
+        "Protein Name": "mitogen-activated protein kinase p38",
+        "Affinity Data": "Kd=1.16uM",
+        "pKd": 5.94,
+        "SMILES": "O=C(Nc1cc(nn1C)C(C)(C)C)Nc1ccc(cc1)Cl",
+        "HB donor/acceptor": "2.0/2.0"
+    },
+    "1m7q": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=2.6nM",
+        "pKd": 8.59,
+        "SMILES": "Fc1ccc(c(c1)F)c1cc(cc2c1cnc(=O)n2c1c(Cl)cccc1Cl)N1CC[NH2+]CC1",
+        "HB donor/acceptor": "1.0/1.0"
+    },
+    "1ouk": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=0.13nM",
+        "pKd": 9.89,
+        "SMILES": "Cn1c(nc(c1c1ccnc(n1)N[C@H](c1ccccc1)C)c1cccc(c1)C(F)(F)F)C1CC[NH2+]CC1",
+        "HB donor/acceptor": "2.0/3.0"
+    },
+    "1ouy": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=4.3nM",
+        "pKd": 8.37,
+        "SMILES": "Fc1ccc(c(c1)F)Sc1nc2cnc(=O)n(c2cc1[C@@H]1C=CNC=C1)c1c(Cl)cccc1Cl",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "1ove": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=0.74nM",
+        "pKd": 9.13,
+        "SMILES": "Fc1ccc(c(c1)F)c1cc(cc2c1CCC(=O)N2c1c(Cl)cccc1Cl)[C@@H]1C=CNC=C1",
+        "HB donor/acceptor": "1.0/1.0"
+    },
+    "1pmn": {
+        "Protein Name": "mitogen-activated protein kinase 10",
+        "Affinity Data": "IC50=7.1nM",
+        "pKd": 8.15,
+        "SMILES": "CCCn1c(nc(c1c1ccnc(n1)NC1CC1)c1ccc(c(c1)Cl)Cl)[C@@H]1CC[N@H+](CC1)C",
+        "HB donor/acceptor": "2.0/3.0"
+    },
+    "1pmu": {
+        "Protein Name": "mitogen-activated protein kinase 10",
+        "Affinity Data": "IC50=590nM",
+        "pKd": 6.23,
+        "SMILES": "Oc1ccc(cc1)c1cnc2c(c1)c1cnccc1cc2",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "1pmv": {
+        "Protein Name": "mitogen-activated protein kinase 10",
+        "Affinity Data": "IC50=150nM",
+        "pKd": 6.82,
+        "SMILES": "O=c1c2ccccc2c2c3c1cccc3[nH]n2",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "1tvo": {
+        "Protein Name": "mitogen-activated protein kinase 1",
+        "Affinity Data": "Ki=0.14uM",
+        "pKd": 6.85,
+        "SMILES": "Nc1n[nH]c2c1cc(nn2)c1c([nH][n+]2c1cccc2)c1ccccc1",
+        "HB donor/acceptor": "3.0/3.0"
+    },
+    "1ukh": {
+        "Protein Name": "Mitogen-activated protein kinase 8 isoform 4",
+        "Affinity Data": "Kd=0.42uM",
+        "pKd": 6.37675,
+        "SMILES": "[NH3+]CCCC[C@@H](C(=O)N[C@H](C(=O)N1CCC[C@H]1C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)O)Cc1ccccc1)CC(C)C)CC(=O)N)CC(C)C)[C@H](O)C)[C@H](O)C)CCC[NH+]=C(N)N)NC(=O)[C@H]1[NH2+]CCC1",
+        "HB donor/acceptor": "13.0/14.0"
+    },
+    "1vet": {
+        "Protein Name": "Mitogen-activated protein kinase kinase 1 interacting protein 1, p14",
+        "Affinity Data": "Kd=12.8nM",
+        "pKd": 7.89279,
+        "SMILES": "N/A",
+        "HB donor/acceptor": "0/0"
+    },
+    "1w7h": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50>1mM",
+        "pKd": 3.0,
+        "SMILES": "Nc1ncccc1OCc1ccccc1",
+        "HB donor/acceptor": "1.0/1.0"
+    },
+    "1w82": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=196nM",
+        "pKd": 6.71,
+        "SMILES": "O=C(Nc1cc(nn1c1ccccc1)C(C)(C)C)Nc1ccc(cc1)Cl",
+        "HB donor/acceptor": "2.0/2.0"
+    },
+    "1w83": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=0.065uM",
+        "pKd": 7.19,
+        "SMILES": "Fc1cc(cc(c1)N1CCOCC1)C(=O)Nc1ccc(c(c1)COc1cccnc1)Cl",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "1w84": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=35uM",
+        "pKd": 4.46,
+        "SMILES": "n1ccc(cc1)CCc1c[nH]c2c1cccc2",
+        "HB donor/acceptor": "1.0/1.0"
+    },
+    "1wbn": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=0.35uM",
+        "pKd": 6.46,
+        "SMILES": "O=C(Nc1n[nH]c(c1)C(C)(C)C)Nc1ccc(c(c1)COc1cccnc1)Cl",
+        "HB donor/acceptor": "3.0/3.0"
+    },
+    "1wbo": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50>1mM",
+        "pKd": 3.0,
+        "SMILES": "Oc1ccccc1Cl",
+        "HB donor/acceptor": "1.0/1.0"
+    },
+    "1wbs": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=0.63uM",
+        "pKd": 6.2,
+        "SMILES": "Fc1cc(cc(c1)N1CCOCC1)C(=O)Nc1ccc2c(c1)c(CCc1ccncc1)c[nH]2",
+        "HB donor/acceptor": "2.0/2.0"
+    },
+    "1wbt": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=0.34uM",
+        "pKd": 6.47,
+        "SMILES": "Fc1cc(cc(c1)N1CCOCC1)C(=O)Nc1ccc2c(c1)n(CCc1ccncc1)cc2",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "1wbv": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=162uM",
+        "pKd": 3.79,
+        "SMILES": "Fc1cc(cc(c1)N1CCOCC1)C(=O)Nc1ccc2c(c1)cc[nH]2",
+        "HB donor/acceptor": "2.0/1.0"
+    },
+    "1wbw": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=44uM",
+        "pKd": 4.36,
+        "SMILES": "Nc1ncccc1OCc1cccc2c1cccc2",
+        "HB donor/acceptor": "1.0/1.0"
+    },
+    "1wzy": {
+        "Protein Name": "mitogen-activated protein kinase 1",
+        "Affinity Data": "IC50=0.56uM",
+        "pKd": 6.25,
+        "SMILES": "CCCn1nc(c2c1nnc(c2)c1c([nH]c2c1cccc2)c1ccccc1)N",
+        "HB donor/acceptor": "2.0/3.0"
+    },
+    "1yqj": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "Ki=7.3nM",
+        "pKd": 8.14,
+        "SMILES": "n1ccc(cc1)c1cc(nnc1c1ccc2c(c1)cccc2)N1CC[NH2+][C@H](C1)Cc1ccccc1",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "1yw2": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=141nM",
+        "pKd": 6.85,
+        "SMILES": "CCOCn1oc(=O)c(c1c1ccnc(n1)Oc1ccccc1O)c1ccc(cc1)F",
+        "HB donor/acceptor": "1.0/4.0"
+    },
+    "1ywr": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=13nM",
+        "pKd": 7.89,
+        "SMILES": "Fc1ccc(cc1)c1c(=O)n(n(c1c1ccnc(n1)N[C@H](c1ccccc1)C)C)C1CC[NH2+]CC1",
+        "HB donor/acceptor": "2.0/3.0"
+    },
+    "1zyj": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=1.5uM",
+        "pKd": 5.82,
+        "SMILES": "O=C(c1ccc(cc1)Oc1ccccc1)NCc1ccccn1",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "1zz2": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=6.0uM",
+        "pKd": 5.22,
+        "SMILES": "Fc1ccc(cc1)Oc1cccc(c1)NS(=O)(=O)N1CCC(CC1)[NH2+]Cc1ccccc1O",
+        "HB donor/acceptor": "3.0/3.0"
+    },
+    "1zzl": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=5.0nM",
+        "pKd": 8.3,
+        "SMILES": "Fc1ccc(cc1)c1ncoc1c1ccc2n(c1)c(nn2)C(C)C",
+        "HB donor/acceptor": "0.0/3.0"
+    },
+    "2baj": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "Kd=4.0nM",
+        "pKd": 8.4,
+        "SMILES": "O=C(Nc1cccc(c1Cl)Cl)Nc1cc(nn1c1ccccc1)C(C)(C)C",
+        "HB donor/acceptor": "2.0/2.0"
+    },
+    "2bak": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "Kd=37nM",
+        "pKd": 7.43,
+        "SMILES": "COc1cc2ncnc(c2cc1OCC[NH+]1CCCC1)Nc1cc(ccc1C)NC(=O)c1ccnc(c1)N1CCOCC1",
+        "HB donor/acceptor": "3.0/4.0"
+    },
+    "2bal": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "Kd=490nM",
+        "pKd": 6.31,
+        "SMILES": "Fc1ccc(cc1)n1ncc(c1N)C(=O)c1cccc(c1)OC1CC[NH2+]CC1",
+        "HB donor/acceptor": "2.0/2.0"
+    },
+    "2ewa": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "Kd=11.5nM",
+        "pKd": 7.94,
+        "SMILES": "Fc1ccc(cc1)c1[nH]c(nc1c1ccncc1)c1ccc(cc1)[S@@](=O)C",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "2g01": {
+        "Protein Name": "mitogen-activated protein kinase 8",
+        "Affinity Data": "IC50=1.22uM",
+        "pKd": 5.91,
+        "SMILES": "Clc1ccc2c(c1)c(=O)c1c(n2O)n(nc1C)C",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "2gfs": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=0.7uM",
+        "pKd": 6.15,
+        "SMILES": "OC[C@@H](COc1cccc(c1)C(=O)c1cnn(c1N)c1ccc(cc1)F)O",
+        "HB donor/acceptor": "3.0/4.0"
+    },
+    "2gmx": {
+        "Protein Name": "mitogen-activated protein kinase 8",
+        "Affinity Data": "IC50=77nM",
+        "pKd": 7.11,
+        "SMILES": "CCOc1nc(NC(=O)Cc2cc(OC)c(cc2OC)Br)cc(c1C#N)N",
+        "HB donor/acceptor": "2.0/3.0"
+    },
+    "2gph": {
+        "Protein Name": "Mitogen-activated protein kinase 1",
+        "Affinity Data": "Kd=5uM",
+        "pKd": 5.30103,
+        "SMILES": "CSCC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)O)CS)CC(=O)O)CC(C)C)NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@H](C(C)C)NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)CNC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@H](CCC[NH+]=C(N)N)[NH3+])CC(C)C)CCC(=O)N)CCC(=O)O)CCC[NH+]=C(N)N)CCC[NH+]=C(N)N)CO)CC(=O)N)C)CC(C)C",
+        "HB donor/acceptor": "19.0/24.0"
+    },
+    "2h96": {
+        "Protein Name": "mitogen-activated protein kinase 8",
+        "Affinity Data": "IC50=0.23uM",
+        "pKd": 6.64,
+        "SMILES": "CCOc1nc(ccc1C#N)C(=O)NCc1cc(OC)ccc1OC",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "2i0h": {
+        "Protein Name": "mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=9nM",
+        "pKd": 8.05,
+        "SMILES": "Fc1ccc(c(c1)Cl)N(c1ccc(=O)n(n1)c1ccccc1Cl)CCCN1C(=O)c2c(C1=O)cccc2",
+        "HB donor/acceptor": "0.0/3.0"
+    },
+    "2no3": {
+        "Protein Name": "Mitogen-activated protein kinase 8(JNK-1)",
+        "Affinity Data": "IC50=9nM",
+        "pKd": 8.05,
+        "SMILES": "Oc1cccc(c1)Nc1nccc(n1)Nc1ccccc1C(=O)N",
+        "HB donor/acceptor": "4.0/4.0"
+    },
+    "2o0u": {
+        "Protein Name": "Mitogen-activated protein kinase 10",
+        "Affinity Data": "Ki=3.2uM",
+        "pKd": 5.49,
+        "SMILES": "N#Cc1c(sc2c1CCN(C2)C(=O)CC[NH+]1CCCCC1)NC(=O)c1cccc2c1cccc2",
+        "HB donor/acceptor": "2.0/3.0"
+    },
+    "2o2u": {
+        "Protein Name": "Mitogen-activated protein kinase 10",
+        "Affinity Data": "Ki=0.4uM",
+        "pKd": 6.4,
+        "SMILES": "N#Cc1c(NC(=O)c2ccccc2F)sc2c1CCCC2",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "2ojg": {
+        "Protein Name": "Mitogen-activated protein kinase 1",
+        "Affinity Data": "Ki=2.3uM",
+        "pKd": 5.64,
+        "SMILES": "CN(C(=O)c1[nH]cc(c1)c1[nH]ncc1c1ccccc1)C",
+        "HB donor/acceptor": "2.0/2.0"
+    },
+    "2oji": {
+        "Protein Name": "Mitogen-activated protein kinase 1",
+        "Affinity Data": "Ki=86nM",
+        "pKd": 7.07,
+        "SMILES": "Clc1cccc(c1)c1c[nH]nc1c1c[nH]c(c1)C(=O)NCc1ccccc1",
+        "HB donor/acceptor": "3.0/2.0"
+    },
+    "2ojj": {
+        "Protein Name": "Mitogen-activated protein kinase 1",
+        "Affinity Data": "Ki=2nM",
+        "pKd": 8.7,
+        "SMILES": "OC[C@H](c1ccc(c(c1)Cl)F)NC(=O)c1[nH]cc(c1)c1[nH]ncc1c1cccc(c1)Cl",
+        "HB donor/acceptor": "4.0/3.0"
+    },
+    "2ok1": {
+        "Protein Name": "Mitogen-activated protein kinase 1",
+        "Affinity Data": "Ki=0.55uM",
+        "pKd": 6.26,
+        "SMILES": "Clc1cccc(c1)c1cn[nH]c1c1c[nH]c(c1)C(=O)NCc1ccccc1",
+        "HB donor/acceptor": "3.0/2.0"
+    },
+    "2qd9": {
+        "Protein Name": "Mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=13nM",
+        "pKd": 7.89,
+        "SMILES": "COc1nc2[nH]cc(c2cc1C(=O)N1CCn2c(C1)cnc2c1ccc(cc1F)F)C(=O)C(=O)N1CC[C@H](C1)O",
+        "HB donor/acceptor": "2.0/6.0"
+    },
+    "2rg5": {
+        "Protein Name": "p38\u03b1 Mitogen-activated protein kinase 14 (MAP)",
+        "Affinity Data": "IC50=3.1nM",
+        "pKd": 8.50864,
+        "SMILES": "CCNC(=O)c1cn2c(c1C)c(ncn2)Nc1cc(ccc1C)C(=O)NOC",
+        "HB donor/acceptor": "3.0/4.0"
+    },
+    "2rg6": {
+        "Protein Name": "p38\u03b1 Mitogen-activated protein kinase 14 (MAP)",
+        "Affinity Data": "IC50=2.2nM",
+        "pKd": 8.65758,
+        "SMILES": "CONC(=O)c1ccc(c(c1)Nc1ncnn2c1c(C)c(c2)C(=O)N[C@H](c1ccccc1)C)C",
+        "HB donor/acceptor": "3.0/4.0"
+    },
+    "2waj": {
+        "Protein Name": "Mitogen-Activated Protein Kinase 10, HUMAN JNK3",
+        "Affinity Data": "IC50=0.398uM",
+        "pKd": 6.40012,
+        "SMILES": "COc1cc2ccnc(c2cc1Cl)c1cccc(c1)Br",
+        "HB donor/acceptor": "0.0/1.0"
+    },
+    "2xrw": {
+        "Protein Name": "MITOGEN-ACTIVATED PROTEIN KINASE 8",
+        "Affinity Data": "Kd=7.1uM",
+        "pKd": 5.15,
+        "SMILES": "OC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N1CCC[C@H]1C(=O)N[C@H](C(=O)N[C@H](C(=O)O)CCC(=O)O)CC(C)C)CC(C)C)Cc1ccc(cc1)O)CC(C)C)Cc1nc[nH]c1)CC(=O)O)CCC[NH+]=C(N)N)NC(=O)[C@@H]1CCCN1C(=O)[C@@H]([NH3+])C",
+        "HB donor/acceptor": "13.0/20.0"
+    },
+    "2xs0": {
+        "Protein Name": "MITOGEN-ACTIVATED PROTEIN KINASE 8",
+        "Affinity Data": "Kd=7.1uM",
+        "pKd": 5.15,
+        "SMILES": "OC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N1CCC[C@H]1C(=O)N[C@H](C(=O)N[C@H](C(=O)O)CCC(=O)O)CC(C)C)CC(C)C)Cc1ccc(cc1)O)CC(C)C)Cc1nc[nH]c1)CC(=O)O)CCC[NH+]=C(N)N)NC(=O)[C@@H]1CCCN1C(=O)[C@H](CCC[NH+]=C(N)N)[NH3+]",
+        "HB donor/acceptor": "13.0/20.0"
+    },
+    "2y8o": {
+        "Protein Name": "MITOGEN-ACTIVATED PROTEIN KINASE 14",
+        "Affinity Data": "Kd=7.5uM",
+        "pKd": 5.12,
+        "SMILES": "[NH3+]CCCC[C@@H](C(=O)N[C@H](C(=O)N1CCC[C@H]1C(=O)N[C@H](C(=O)O)C)[C@H](CC)C)NC(=O)[C@@H](NC(=O)CNC(=O)[C@@H]1CCCN1C(=O)[C@H](CC(=O)N)[NH3+])CC(C)C",
+        "HB donor/acceptor": "8.0/10.0"
+    },
+    "2y9q": {
+        "Protein Name": "MITOGEN-ACTIVATED PROTEIN KINASE 1",
+        "Affinity Data": "Kd=0.7uM",
+        "pKd": 6.15,
+        "SMILES": "[NH3+]CCCC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)O)CC(C)C)C)CCC[NH+]=C(N)N)CCC[NH+]=C(N)N)CCC[NH+]=C(N)N)C)CC(C)C)CCC[NH+]=C(N)N)CO)NC(=O)[C@@H](NC(=O)[C@@H]1CCCN1C(=O)[C@@H]1CCCN1C(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@H](CCSC)[NH3+])CCCC[NH3+])CC(C)C)CO)CO",
+        "HB donor/acceptor": "20.0/21.0"
+    },
+    "2yis": {
+        "Protein Name": "MITOGEN-ACTIVATED PROTEIN KINASE 14",
+        "Affinity Data": "IC50=1.7nM",
+        "pKd": 8.77,
+        "SMILES": "OCCSc1ccccc1c1nnc2n1cc(cc2)Sc1ccccc1CNC(=O)Nc1cc(nn1c1ccc(c(c1)Cl)O)C(C)(C)C",
+        "HB donor/acceptor": "4.0/6.0"
+    },
+    "2yiw": {
+        "Protein Name": "MITOGEN-ACTIVATED PROTEIN KINASE 14",
+        "Affinity Data": "IC50=0.8nM",
+        "pKd": 9.1,
+        "SMILES": "O=C(Nc1cc(nn1c1ccccc1)C(C)(C)C)NCc1ccccc1Sc1ccc2n(c1)c(nn2)C(C)C",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "2yix": {
+        "Protein Name": "MITOGEN-ACTIVATED PROTEIN KINASE 14",
+        "Affinity Data": "Kd=3.3nM",
+        "pKd": 8.48,
+        "SMILES": "CCNC(=O)NCc1ccccc1Sc1ccc2n(c1)c(nn2)C(C)C",
+        "HB donor/acceptor": "2.0/3.0"
+    },
+    "2zdt": {
+        "Protein Name": "Mitogen-activated protein kinase 10",
+        "Affinity Data": "IC50=9.6nM",
+        "pKd": 8.01773,
+        "SMILES": "CCC(=O)c1c(c2ccccc2)c2cc(Cl)ccc2c(=O)n1Cc1ccc(cc1)C(=O)O",
+        "HB donor/acceptor": "0.0/4.0"
+    },
+    "3ctq": {
+        "Protein Name": "Mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=40nM",
+        "pKd": 7.39794,
+        "SMILES": "COc1c(cc(cc1NS(=O)(=O)C)C(C)(C)C)NC(=O)c1ccc(c(c1)n1nnc(c1)C(=O)NCc1ccccc1)C",
+        "HB donor/acceptor": "3.0/6.0"
+    },
+    "3da6": {
+        "Protein Name": "Mitogen-activated protein kinase 10",
+        "Affinity Data": "IC50=2nM",
+        "pKd": 8.69897,
+        "SMILES": "CNc1nccc(n1)c1cccnc1Oc1c(C)cc(c2c1cccc2)Nc1nc2c([nH]1)cccc2",
+        "HB donor/acceptor": "3.0/4.0"
+    },
+    "3ds6": {
+        "Protein Name": "Mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=0.8nM",
+        "pKd": 9.09691,
+        "SMILES": "Cc1ccc(cc1c1ccc2c(c1)cnnc2c1ccccc1C)C(=O)NC1CC1",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "3dt1": {
+        "Protein Name": "Mitogen-activated protein kinase 14",
+        "Affinity Data": "IC50=2.4nM",
+        "pKd": 8.61979,
+        "SMILES": "Cc1ccc(cc1c1ccc2c(c1)cnc(n2)NCC[NH+]1CCOCC1)C(=O)NC1CC1",
+        "HB donor/acceptor": "3.0/3.0"
+    },
+    "3dtc": {
+        "Protein Name": "Mitogen-activated protein kinase 9",
+        "Affinity Data": "IC50=26nM",
+        "pKd": 7.58503,
+        "SMILES": "OCCn1c2ccccc2c2c1c1ccc3c(c1c1c2C=NC1=O)ccc(c3)OC(C)C",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "3e7o": {
+        "Protein Name": "Mitogen-activated protein kinase 9",
+        "Affinity Data": "IC50=120nM",
+        "pKd": 6.92082,
+        "SMILES": "O=C(c1ccco1)Nc1cccc(c1)c1n[nH]c2c1cc(cc2)c1ncn[nH]1",
+        "HB donor/acceptor": "3.0/4.0"
+    },
+    "3e8n": {
+        "Protein Name": "human mitogen-activated protein kinase kinase 1 (MEK1)",
+        "Affinity Data": "IC50=19nM",
+        "pKd": 7.72,
+        "SMILES": "OC[C@H](CC1(CC1)S(=O)(=O)Nc1c(OC)cc(c(c1Nc1ccc(cc1F)I)F)F)O",
+        "HB donor/acceptor": "4.0/4.0"
+    },
+    "3eqb": {
+        "Protein Name": "human mitogen-activated protein kinase kinase 1 (MEK1)",
+        "Affinity Data": "IC50=15mM",
+        "pKd": 1.82391,
+        "SMILES": "[NH3+]CCNc1nnc(o1)c1ccc(c(c1Nc1ccc(cc1F)I)F)F",
+        "HB donor/acceptor": "3.0/2.0"
+    },
+    "3fc1": {
+        "Protein Name": "human p38 kinase, Mitogen-activated protein kinase 14, MAPK14",
+        "Affinity Data": "IC50=10nM",
+        "pKd": 8.0,
+        "SMILES": "Fc1ccc(c(c1)F)Sc1ccc2n([nH]1)C=NC(=O)[C@H]2c1c(Cl)cccc1Cl",
+        "HB donor/acceptor": "1.0/1.0"
+    },
+    "3fv8": {
+        "Protein Name": "Mitogen-activated protein kinase 10, JNK3",
+        "Affinity Data": "IC50=0.16uM",
+        "pKd": 6.79588,
+        "SMILES": "C=CC[NH+]1CCN(CC1)c1c(Cl)cccc1NC(=O)c1ccc(o1)Br",
+        "HB donor/acceptor": "2.0/1.0"
+    },
+    "3g90": {
+        "Protein Name": "Mitogen-activated protein kinase, JNK3",
+        "Affinity Data": "Ki=0.44uM",
+        "pKd": 6.35655,
+        "SMILES": "O/N=C\\1/C(=O)N(c2c1cc(F)cc2)Cc1cc(F)cc2c1OCOC2",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "3g9l": {
+        "Protein Name": "Mitogen-activated protein kinase, JNK3",
+        "Affinity Data": "Ki=0.74uM",
+        "pKd": 6.13077,
+        "SMILES": "O/N=C\\1/c2c(cccc2N(C1=O)Cc1cc(F)cc2c1OCOC2)/C=C/c1ccccc1",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "3g9n": {
+        "Protein Name": "Mitogen-activated protein kinase, JNK3",
+        "Affinity Data": "Ki=1.8uM",
+        "pKd": 5.74473,
+        "SMILES": "O/N=C/1\\C(=O)N(c2c1c(ccc2)c1ccccc1)Cc1cc(F)cc2c1OCOC2",
+        "HB donor/acceptor": "1.0/2.0"
+    },
+    "3gfe": {
+        "Protein Name": "p38a Mitogen-Activated protein kinase 14",
+        "Affinity Data": "IC50=3.2nM",
+        "pKd": 8.49485,
+        "SMILES": "Fc1ccc(c(c1)F)n1ncc2c1N(C)C(=O)C/C/2=N\\c1cc(ccc1C)C(=O)NC1CC1",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "3hrb": {
+        "Protein Name": "Mitogen-activated protein kinase 14, unphosphorylated p38 alpha",
+        "Affinity Data": "IC50=21nM",
+        "pKd": 7.67778,
+        "SMILES": "Fc1ccc(c(c1)F)C(=O)c1cc[n+](c(c1N)c1ccccc1C)O",
+        "HB donor/acceptor": "2.0/2.0"
+    },
+    "3i5z": {
+        "Protein Name": "Mitogen-activated protein kinase 1",
+        "Affinity Data": "Ki=2nM",
+        "pKd": 8.7,
+        "SMILES": "OC[C@H](c1ccccc1)NC(=O)c1[nH]cc(c1)c1nc(ncc1C)Nc1ccccc1",
+        "HB donor/acceptor": "4.0/4.0"
+    },
+    "3i60": {
+        "Protein Name": "Mitogen-activated protein kinase 1",
+        "Affinity Data": "Ki=2nM",
+        "pKd": 8.7,
+        "SMILES": "OC[C@H](c1ccccc1)NC(=O)c1[nH]cc(c1)c1nc(ncc1C)Nc1ccccc1Cl",
+        "HB donor/acceptor": "4.0/4.0"
+    },
+    "3iph": {
+        "Protein Name": "Mitogen-activated protein kinase 14, p38",
+        "Affinity Data": "Ki=25.1nM",
+        "pKd": 7.60033,
+        "SMILES": "Cc1ccc(cc1c1ccc(cn1)C(=O)NC[C@@H]1C=C1)C(=O)NC1CC1",
+        "HB donor/acceptor": "2.0/3.0"
+    },
+    "3itz": {
+        "Protein Name": "p38a Mitogen-Activated Protein Kinase",
+        "Affinity Data": "IC50=1.4nM",
+        "pKd": 8.85,
+        "SMILES": "Clc1ccc(cc1Nc1nncc2c1cnn2c1c(F)cccc1F)C(=O)NC1CC1",
+        "HB donor/acceptor": "2.0/4.0"
+    },
+    "3k3i": {
+        "Protein Name": "Mitogen-activated protein kinase 14, p38 alpha",
+        "Affinity Data": "IC50=1.9uM",
+        "pKd": 5.72125,
+        "SMILES": "Brc1ccc(cc1)c1c[nH]c(n1)[C@H]1[NH2+]Cc2c(C1)cccc2",
+        "HB donor/acceptor": "2.0/1.0"
+    },
+    "3k3j": {
+        "Protein Name": "Mitogen-activated protein kinase 14, p38 alpha",
+        "Affinity Data": "IC50>12.5uM",
+        "pKd": 4.9,
+        "SMILES": "Fc1ccc(cc1)n1nc(cc(c1=O)C(=O)NCc1ccccc1C(F)(F)F)c1ccncc1",
+        "HB donor/acceptor": "1.0/3.0"
+    },
+    "3kvx": {
+        "Protein Name": "Mitogen-activated protein kinase 10, JNK3",
+        "Affinity Data": "IC50=0.148uM",
+        "pKd": 6.82974,
+        "SMILES": "Fc1cc(cc(c1)c1ccnc(n1)Nc1ccc(cc1)n1cnc(n1)N1CCOCC1)N1CCOCC1",
+        "HB donor/acceptor": "1.0/4.0"
+    },
+    "3lhj": {
+        "Protein Name": "p38a Mitogen-Activated Protein Kinase",
+        "Affinity Data": "Kd=0.31nM",
+        "pKd": 9.51,
+        "SMILES": "Fc1ccc(c(c1)F)n1ncc2c1n(C)c(=O)c(c2)c1cc(ccc1C)C(=O)NC1CC1",
+        "HB donor/acceptor": "1.0/3.0"
     }
 };
