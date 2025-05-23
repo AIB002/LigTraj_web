@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LigTraj | Molecular Dynamics Portal</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <style>
     * {
       margin: 0;
@@ -15,66 +16,251 @@
       height: 100vh;
       background: url('img/Homepage.png') no-repeat center center fixed;
       background-size: cover;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       text-align: center;
       color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Animated background overlay */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 30% 80%, rgba(0, 188, 212, 0.3) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(0, 150, 136, 0.3) 0%, transparent 50%),
+                  radial-gradient(circle at 40% 40%, rgba(33, 150, 243, 0.2) 0%, transparent 50%);
+      animation: gradientShift 20s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      33% { transform: scale(1.1) rotate(120deg); }
+      66% { transform: scale(0.9) rotate(240deg); }
+    }
+
+    /* Animated particles */
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      animation: float 20s infinite linear;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-100vh) translateX(100px);
+        opacity: 0;
+      }
+    }
+
+    /* Logo animation */
+    .logo-animation {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 2rem;
+      position: relative;
+      animation: logoFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes logoFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .logo-animation svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 0 30px rgba(0, 188, 212, 0.8));
     }
 
     h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px rgba(0,0,0,0.4);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #ffffff 0%, #00e5ff 50%, #00b8d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 40px rgba(0, 188, 212, 0.5);
+      animation: titleGlow 3s ease-in-out infinite alternate;
+      letter-spacing: -0.02em;
     }
 
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto 40px auto;
+    @keyframes titleGlow {
+      from { filter: brightness(1); }
+      to { filter: brightness(1.2); }
+    }
+
+    .subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      max-width: 700px;
+      margin: 0 auto 3rem auto;
       line-height: 1.6;
-      text-shadow: 0 0 8px rgba(0,0,0,0.3);
+      opacity: 0;
+      animation: fadeInUp 1s ease-out 0.3s forwards;
+      color: rgba(255, 255, 255, 0.9);
+      letter-spacing: 0.02em;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .enter-button {
-      padding: 15px 40px;
-      font-size: 20px;
-      background-color: #00cccc;
+      position: relative;
+      padding: 1rem 3rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #00e5ff 0%, #00b8d4 100%);
       border: none;
-      border-radius: 8px;
+      border-radius: 50px;
       color: white;
       cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
+      overflow: hidden;
+      animation: fadeInUp 1s ease-out 0.5s backwards;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .enter-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s;
     }
 
     .enter-button:hover {
-      background-color: #009999;
-      transform: scale(1.05);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(0, 188, 212, 0.4);
+    }
+
+    .enter-button:hover::before {
+      left: 100%;
+    }
+
+    .enter-button:active {
+      transform: translateY(-1px) scale(1);
+    }
+
+    /* Loading indicator */
+    .loading-text {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.875rem;
+      opacity: 0.7;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 0.3; }
     }
 
     @media (max-width: 768px) {
-      h1 {
-        font-size: 2.2rem;
+      .logo-animation {
+        width: 80px;
+        height: 80px;
       }
-      p {
-        font-size: 1rem;
-        padding: 0 20px;
+      
+      .subtitle {
+        padding: 0 2rem;
       }
+      
       .enter-button {
-        font-size: 18px;
-        padding: 12px 30px;
+        padding: 0.875rem 2.5rem;
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to LigTraj</h1>
-  <p>
-    A unified analysis platform for small molecule-protein molecular dynamics trajectories.
+  <!-- Animated particles -->
+  <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+  <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+  <div class="particle" style="left: 40%; animation-delay: 6s;"></div>
+  <div class="particle" style="left: 50%; animation-delay: 8s;"></div>
+  <div class="particle" style="left: 60%; animation-delay: 10s;"></div>
+  <div class="particle" style="left: 70%; animation-delay: 12s;"></div>
+  <div class="particle" style="left: 80%; animation-delay: 14s;"></div>
+  <div class="particle" style="left: 90%; animation-delay: 16s;"></div>
+
+  <div class="logo-animation">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="45" stroke="#00e5ff" stroke-width="2" fill="none" opacity="0.3">
+        <animate attributeName="r" values="45;48;45" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="50" cy="50" r="35" stroke="#00b8d4" stroke-width="1" fill="none" opacity="0.5">
+        <animate attributeName="r" values="35;38;35" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+      </circle>
+      <path d="M34 40L50 32L66 40L66 60L50 68L34 60Z" fill="#00e5ff" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="50" cy="50" r="8" fill="#ffffff">
+        <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Orbital electrons -->
+      <circle cx="50" cy="20" r="3" fill="#00e5ff">
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="80" cy="50" r="3" fill="#00b8d4">
+        <animateTransform attributeName="transform" type="rotate" from="120 50 50" to="480 50 50" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="50" cy="80" r="3" fill="#00e5ff">
+        <animateTransform attributeName="transform" type="rotate" from="240 50 50" to="600 50 50" dur="10s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+  </div>
+
+  <h1>LigTraj</h1>
+  <p class="subtitle">
+    A unified analysis platform for small molecule-protein molecular dynamics trajectories
   </p>
-  <button class="enter-button" onclick="window.location.href='ligtraj.html'">Enter LigTraj</button>
+  <button class="enter-button" onclick="window.location.href='ligtraj.html'">
+    Enter Platform
+  </button>
+
+  <div class="loading-text">Loading molecular data...</div>
+  <script src="js/molecule-preview.js"></script>
 </body>
 </html>

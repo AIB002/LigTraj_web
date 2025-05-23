@@ -1,4 +1,4 @@
-// js/data.js
+// Enhanced js/data.js with additional utility functions
 const pdbData = {
     "CDK Family": [
         "3qts", "3qtu", "3qtw", "3qtz", "3r8u", "3r8z", "1unl", "3qqk", "3qtq", "3qtr", "3qu0", "3r9d", "3r9h", "3r9o", "3rah", "3rak", "3rmf", "3rpr", "3rpv", "3rzb", "3s00", "3s1h", "3ral", "3rjc", "3rk7", "3rk9", "3rkb", "3rni", "3rpy", "3s2p", "3sqq", "3ti1", "3tiy", "3uli", "3wbl", "4bcg", "4bch", "4bcj", "4bcn", "4bcq", "3tiz", "4acm", "4au8", "4aua", "4bcf", "4bci", "4bck", "4bcm", "4bco", "4bcp", "4cfw", "4eoi", "4eok", "4eop", "4eos", "4erw", "4ez3", "4ez5", "4lyn", "4bgh", "4cfm", "4cfv", "4cfx", "4eol", "4eon", "4eor", "4rj3", "5i5z", "5icp", "5idn", "5idp", "5jq5", "5jq8", "5k4j", "5l2i", "5l2s", "5lmk", "5nev", "5bnj", "5d1j", "5hvy", "5l2t", "5l2w", "5lqf", "5mhq", "5xs2", "6b3e", "6ckx", "6gzh", "6q4e", "5xqx"
@@ -22,68 +22,148 @@ const pdbData = {
     ]
 };
 
-// ========= Load Dataset Overview ========= //
-function loadDataset() {
-    const mainContent = document.getElementById('mainContent');
-    mainContent.innerHTML = `
-        <h1>Available Families</h1>
-        <p>Click a family to view its PDB entries:</p>
-    `;
+// Family descriptions for better UX
+const familyDescriptions = {
+    "CDK Family": "Cyclin-dependent kinases involved in cell cycle regulation",
+    "Tyrosine Kinase": "Enzymes that phosphorylate tyrosine residues on proteins",
+    "JAK": "Janus kinases involved in cytokine signaling",
+    "RTKs": "Receptor tyrosine kinases that regulate cellular processes",
+    "PI3K": "Phosphoinositide 3-kinases involved in cellular signaling",
+    "MAPK": "Mitogen-activated protein kinases in signal transduction"
+};
 
-    for (let category in pdbData) {
-        const button = document.createElement('button');
-        button.textContent = category;
-        button.style.margin = '10px';
-        button.style.padding = '10px';
-        button.style.backgroundColor = '#00cccc';
-        button.style.border = 'none';
-        button.style.color = 'white';
-        button.style.borderRadius = '5px';
-        button.style.cursor = 'pointer';
-        button.onclick = () => showFamily(category);
+// Family icons for visual identification
+const familyIcons = {
+    "CDK Family": "bx-dna",
+    "Tyrosine Kinase": "bx-atom",
+    "JAK": "bx-link",
+    "RTKs": "bx-radar",
+    "PI3K": "bx-network-chart",
+    "MAPK": "bx-git-branch"
+};
 
-        mainContent.appendChild(button);
+// Statistics helper functions
+const pdbStats = {
+    getTotalCount: () => {
+        return Object.values(pdbData).reduce((total, family) => total + family.length, 0);
+    },
+    
+    getFamilyCount: (family) => {
+        return pdbData[family] ? pdbData[family].length : 0;
+    },
+    
+    searchPDB: (query) => {
+        const results = [];
+        const searchTerm = query.toLowerCase();
+        
+        for (const [family, pdbs] of Object.entries(pdbData)) {
+            pdbs.forEach(pdb => {
+                if (pdb.toLowerCase().includes(searchTerm) || 
+                    family.toLowerCase().includes(searchTerm)) {
+                    results.push({ family, pdb });
+                }
+            });
+        }
+        
+        return results;
+    },
+    
+    getRandomPDB: () => {
+        const families = Object.keys(pdbData);
+        const randomFamily = families[Math.floor(Math.random() * families.length)];
+        const pdbs = pdbData[randomFamily];
+        const randomPDB = pdbs[Math.floor(Math.random() * pdbs.length)];
+        
+        return { family: randomFamily, pdb: randomPDB };
     }
-}
+};
 
-// ========= Show PDBs for a Family ========= //
-function showFamily(category) {
-    const mainContent = document.getElementById('mainContent');
-    mainContent.innerHTML = `
-        <h1>${category}</h1>
-        <p>Click a PDB ID to view details:</p>
-    `;
+// Export visualization data for charts
+const getVisualizationData = () => {
+    return Object.entries(pdbData).map(([family, pdbs]) => ({
+        name: family,
+        count: pdbs.length,
+        percentage: ((pdbs.length / pdbStats.getTotalCount()) * 100).toFixed(1)
+    }));
+};
 
-    pdbData[category].forEach(pdb => {
-        const link = document.createElement('a');
-        link.textContent = pdb;
-        link.href = '#';
-        link.style.display = 'inline-block';
-        link.style.margin = '5px';
-        link.style.padding = '8px 12px';
-        link.style.backgroundColor = '#0066cc';
-        link.style.color = 'white';
-        link.style.textDecoration = 'none';
-        link.style.borderRadius = '4px';
-        link.onclick = (e) => {
-            e.preventDefault();
-            // 复用 showDetails，和左侧点击效果一致
-            const fakeItem = { textContent: `${category}_${pdb}` };
-            showDetails(fakeItem);
-        };
+// Helper function to check if PDB exists
+const pdbExists = (pdbCode) => {
+    const code = pdbCode.toLowerCase();
+    for (const family of Object.values(pdbData)) {
+        if (family.includes(code)) {
+            return true;
+        }
+    }
+    return false;
+};
 
-        mainContent.appendChild(link);
+// Get family for a specific PDB
+const getFamilyForPDB = (pdbCode) => {
+    const code = pdbCode.toLowerCase();
+    for (const [family, pdbs] of Object.entries(pdbData)) {
+        if (pdbs.includes(code)) {
+            return family;
+        }
+    }
+    return null;
+};
+
+// Batch download helper
+const getBatchDownloadCommands = (pdbList) => {
+    const commands = [];
+    
+    pdbList.forEach(({ family, pdb }) => {
+        const fixedFamily = family.replace(/ /g, '_');
+        const scpPath = `scp -r -P 43276 shizq@10.77.14.128:/public/home/shizq/GROMACS_MD/GAFF_PROLIG/${fixedFamily}/${pdb} ./`;
+        commands.push(scpPath);
     });
-}
+    
+    return commands.join('\n');
+};
 
-// ========= Load Contact Info ========= //
-function loadContact() {
+// Enhanced family display with statistics
+function showFamilyWithStats(category) {
     const mainContent = document.getElementById('mainContent');
+    const description = familyDescriptions[category] || "Protein family structures";
+    const icon = familyIcons[category] || "bx-atom";
+    const count = pdbData[category].length;
+    const percentage = ((count / pdbStats.getTotalCount()) * 100).toFixed(1);
+    
     mainContent.innerHTML = `
-        <h1>Contact</h1>
-        <p><strong>Developer:</strong> A.I.B. Institute of Quantitative Biology, Zhejiang University & TCI, UW-Madison</p>
-        <p><strong>Collaborating Developer:</strong> Xufan Gao, Institute of Quantitative Biology, Zhejiang University</p>
-        <img src="img/contact_background.png" alt="contact visualization" style="width: 100%; border-radius: 12px; margin-top: 20px;">
-
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <i class='bx ${icon}' style="font-size: 3rem; color: var(--primary);"></i>
+            <div>
+                <h1 style="margin: 0;">${category}</h1>
+                <p style="margin: 0; color: var(--text-secondary);">${description}</p>
+            </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+            <div style="background: var(--background); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                <h3 style="color: var(--primary); margin: 0;">${count}</h3>
+                <p style="margin: 0; font-size: 0.875rem; color: var(--text-secondary);">Total Structures</p>
+            </div>
+            <div style="background: var(--background); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                <h3 style="color: var(--accent); margin: 0;">${percentage}%</h3>
+                <p style="margin: 0; font-size: 0.875rem; color: var(--text-secondary);">of Database</p>
+            </div>
+        </div>
+        
+        <p>Click a PDB ID to view detailed structure information and download options.</p>
+        
+        <div class="pdb-grid">
+            ${pdbData[category].map(pdb => `
+                <div class="pdb-item" onclick="showSelectedPDB('${category}', '${pdb}')">
+                    <span>${pdb}</span>
+                </div>
+            `).join('')}
+        </div>
     `;
+    
+    // Add entrance animation to PDB items
+    animatePDBItems();
 }
+
+// Replace the original showFamily function if needed
+window.showFamily = showFamilyWithStats;

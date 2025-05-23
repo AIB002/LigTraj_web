@@ -4,19 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LigTraj - Molecular Dynamics Portal</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/smiles-drawer@2.0.1/dist/smiles-drawer.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' stroke='%2300b8d4' stroke-width='6' fill='none'/%3E%3Cpath d='M34 40L50 32L66 40L66 60L50 68L34 60Z' fill='%2300b8d4'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%230088a3'/%3E%3C/svg%3E">
+  
+  <!-- Meta tags for better SEO -->
+  <meta name="description" content="LigTraj - A unified analysis platform for small molecule-protein molecular dynamics trajectories">
+  <meta name="keywords" content="molecular dynamics, protein analysis, ligand trajectory, computational biology">
 </head>
 <body>
   <!-- Top navigation bar -->
   <nav class="topnav">
     <a href="index.html" class="logo">
-      <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
-        <circle cx="50" cy="50" r="45" stroke="var(--primary)" stroke-width="6" fill="none"/>
-        <path d="M34 40L50 32L66 40L66 60L50 68L34 60Z" fill="var(--primary)" />
-        <circle cx="50" cy="50" r="8" fill="var(--primary-dark)" />
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
+        <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="3" fill="none" opacity="0.3">
+          <animate attributeName="r" values="45;48;45" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <path d="M34 40L50 32L66 40L66 60L50 68L34 60Z" fill="currentColor" opacity="0.9"/>
+        <circle cx="50" cy="50" r="8" fill="currentColor"/>
+        
+        <!-- Orbital electrons -->
+        <circle cx="50" cy="20" r="3" fill="currentColor" opacity="0.7">
+          <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="80" cy="50" r="3" fill="currentColor" opacity="0.7">
+          <animateTransform attributeName="transform" type="rotate" from="120 50 50" to="480 50 50" dur="10s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="50" cy="80" r="3" fill="currentColor" opacity="0.7">
+          <animateTransform attributeName="transform" type="rotate" from="240 50 50" to="600 50 50" dur="10s" repeatCount="indefinite"/>
+        </circle>
       </svg>
       <span>LigTraj</span>
     </a>
@@ -28,7 +49,7 @@
       <a href="#" onclick="loadContact()">Contact</a>
     </div>
     
-    <div class="theme-toggle" id="themeToggle">
+    <div class="theme-toggle" id="themeToggle" title="Toggle theme (Ctrl+T)">
       <i class='bx bx-sun light-icon'></i>
       <i class='bx bx-moon dark-icon'></i>
     </div>
@@ -56,7 +77,13 @@
     
     <div class="search-container">
       <i class='bx bx-search search-icon'></i>
-      <input type="text" id="searchInput" placeholder="Search PDB entries..." oninput="searchPDB()">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search PDB entries... (Ctrl+K)" 
+        autocomplete="off"
+        spellcheck="false"
+      >
     </div>
     
     <ul id="pdbList">
@@ -68,22 +95,59 @@
   <div class="main">
     <div class="intro" id="mainContent">
       <h1>Welcome to LigTraj</h1>
-      <p>LigTraj is a comprehensive database focused on ligand-protein molecular dynamics trajectories. Browse the protein families in the sidebar to explore structure data and download trajectory packages for your research.</p>
+      <p style="font-size: 1.125rem; color: var(--text-primary); margin-bottom: 2rem;">
+        LigTraj is a comprehensive database and analysis platform for ligand-protein molecular dynamics trajectories. 
+        Explore our extensive collection of protein structures and download trajectory packages for your research.
+      </p>
       
-      <img src="img/funnel_screening.png" alt="HPC Screening Funnel" style="max-width: 100%; display: block; margin: 30px auto;">
+      <img src="img/funnel_screening.png" alt="HPC Screening Funnel" loading="lazy">
       
-      <h2>Key Features</h2>
-      <ul>
-        <li>Browse over 500 protein-ligand complexes across multiple protein families</li>
-        <li>View detailed binding information including affinity data and SMILES structures</li>
-        <li>Download ready-to-use molecular dynamics trajectory packages</li>
-        <li>Analyze trajectories with the LigTraj Python package</li>
-      </ul>
+      <h2>🚀 Key Features</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+        <div style="background: var(--background); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.125rem;">
+            <i class='bx bx-data' style="margin-right: 0.5rem;"></i>Extensive Database
+          </h3>
+          <p style="margin: 0; font-size: 0.95rem;">Browse over 500 protein-ligand complexes across multiple protein families</p>
+        </div>
+        
+        <div style="background: var(--background); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.125rem;">
+            <i class='bx bx-info-circle' style="margin-right: 0.5rem;"></i>Detailed Information
+          </h3>
+          <p style="margin: 0; font-size: 0.95rem;">View binding affinity data, SMILES structures, and hydrogen bond information</p>
+        </div>
+        
+        <div style="background: var(--background); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.125rem;">
+            <i class='bx bx-download' style="margin-right: 0.5rem;"></i>Ready-to-Use Packages
+          </h3>
+          <p style="margin: 0; font-size: 0.95rem;">Download molecular dynamics trajectory packages for your simulations</p>
+        </div>
+        
+        <div style="background: var(--background); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.125rem;">
+            <i class='bx bx-code-alt' style="margin-right: 0.5rem;"></i>Analysis Tools
+          </h3>
+          <p style="margin: 0; font-size: 0.95rem;">Analyze trajectories with the powerful LigTraj Python package</p>
+        </div>
+      </div>
       
-      <p>Select a protein family and PDB entry from the sidebar to begin exploring.</p>
+      <div style="background: var(--background); padding: 1.5rem; border-radius: var(--radius-lg); margin-top: 2rem; border: 1px solid var(--border-color);">
+        <h3 style="color: var(--secondary); margin-bottom: 1rem;">
+          <i class='bx bx-bulb' style="color: var(--accent);"></i> Getting Started
+        </h3>
+        <ol style="margin: 0; padding-left: 1.5rem; color: var(--text-primary);">
+          <li style="margin-bottom: 0.5rem;">Select a protein family from the sidebar</li>
+          <li style="margin-bottom: 0.5rem;">Choose a specific PDB entry to view details</li>
+          <li style="margin-bottom: 0.5rem;">Explore molecular structure and binding information</li>
+          <li>Download trajectory packages for your research</li>
+        </ol>
+      </div>
     </div>
   </div>
 
+  <!-- Scripts -->
   <script src="js/data.js"></script>
   <script src="js/pdb_info.js"></script> 
   <script src="js/script.js"></script>
